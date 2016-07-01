@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="#fff7f5ed" android:layout_width="fill_parent" android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+     <include layout="@layout/header"/>
+      <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/scroll_gps">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                  <LinearLayout android:orientation="vertical" android:background="#fffffcf8" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="vertical" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                              <LinearLayout android:orientation="horizontal" android:padding="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                    <TextView android:textSize="14.0dip" android:textColor="@color/black_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="GPS开关" android:layout_weight="1.0" />
+                                    <TextView android:textSize="14.0dip" android:textColor="#ff4990cf" android:id="@+id/gps_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+                              </LinearLayout>
+                              <LinearLayout android:orientation="horizontal" android:padding="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                    <TextView android:textSize="14.0dip" android:textColor="@color/black_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="网络环境检测" android:layout_weight="1.0" />
+                                    <TextView android:textSize="14.0dip" android:textColor="#ff4990cf" android:id="@+id/network_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+                              </LinearLayout>
+                              <LinearLayout android:orientation="horizontal" android:padding="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                    <TextView android:textSize="14.0dip" android:textColor="@color/black_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="可连接卫星数" android:layout_weight="1.0" />
+                                    <TextView android:textSize="14.0dip" android:textColor="@color/red" android:id="@+id/setlite_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0颗" />
+                              </LinearLayout>
+                        </LinearLayout>
+                        <!--<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">-->
+                              <!--<TextView android:textSize="20.0dip" android:textColor="@color/black_text" android:gravity="center" android:id="@+id/start_gps_test" android:background="@drawable/btn_default" android:layout_width="0.0dip" android:layout_height="50.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="GPS信号" android:layout_weight="1.0" />-->
+                              <!--<TextView android:textSize="20.0dip" android:textColor="@color/black_text" android:gravity="center" android:id="@+id/btn_retest" android:background="@drawable/btn_main" android:layout_width="0.0dip" android:layout_height="50.0dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="重新检测" android:layout_weight="1.0" />-->
+                        <!--</LinearLayout>-->
+                  </LinearLayout>
+                  <TextView android:textSize="18.0dip" android:textColor="@color/black_text" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="检测结果" />
+                  <LinearLayout android:orientation="vertical" android:background="#fffffcf8" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="20.0dip" android:textColor="@color/red" android:id="@+id/test_result" android:background="@drawable/btn_transparent" android:paddingLeft="15.0dip" android:paddingTop="10.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" />
+                        <!--<TextView android:textSize="20.0dip" android:textColor="@color/red" android:id="@+id/test_gps_result" android:background="@drawable/btn_transparent" android:paddingLeft="15.0dip" android:paddingTop="10.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" />-->
+                  </LinearLayout>
+                  <TextView android:textSize="18.0dip" android:textColor="@color/black_text" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="定位注意事项" />
+                  <TextView android:textSize="12.0dip" android:textColor="@color/black_text" android:background="#fffffcf8" android:padding="10.0dip" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="① GPS是完全免费的，放心使用吧！\n② 定位时请保证手机网络连接通畅，GPS定位方式不需要联网,但有网络的状态下,定位会更快更准确。\n③ GPS在室内是无法使用的，这是常识请知晓。\n④ 金属及含有金属的东西可以阻挡GPS信号，比如汽车玻璃隔热膜、钢筋混凝土结构：如楼房、高架桥。另外还有隧道、茂密的树林，这些都是可以遮挡GPS信号的。\n⑤ 当汽车在高速运动时，一般手机在车内也比较难以获得GPS信号。你可以将车停下来，待获得GPS信号后再行驶即可。" />
+            </LinearLayout>
+      </ScrollView>
+</LinearLayout>

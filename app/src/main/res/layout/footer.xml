@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/footer_main_menu"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ff2499dc"
+    android:orientation="horizontal"
+    android:padding="1.0dip">
+
+    <RadioGroup
+        android:id="@+id/main_menu_radio"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/btn_1"
+            style="@style/main_tab_bottom"
+            android:layout_height="fill_parent"
+            android:checked="true"
+            android:drawableTop="@drawable/yyzl"
+            android:paddingTop="1.0dip"
+            android:tag="1"
+            android:text="语音播报"
+            android:textSize="12.0dip" />
+
+        <RadioButton
+            android:id="@+id/btn_2"
+            style="@style/main_tab_bottom"
+            android:layout_height="fill_parent"
+            android:drawableTop="@drawable/bbx"
+            android:paddingTop="1.0dip"
+            android:tag="2"
+            android:text="发现"
+            android:textSize="12.0dip" />
+
+        <RadioButton
+            android:id="@+id/btn_3"
+            style="@style/main_tab_bottom"
+            android:layout_height="fill_parent"
+            android:drawableTop="@drawable/grzx"
+            android:paddingTop="1.0dip"
+            android:tag="3"
+            android:text="找教练"
+            android:textSize="12.0dip" />
+
+        <RadioButton
+            android:id="@+id/btn_4"
+            style="@style/main_tab_bottom"
+            android:layout_height="fill_parent"
+            android:drawableTop="@drawable/xtsz"
+            android:paddingTop="1.0dip"
+            android:tag="4"
+            android:text="系统设置"
+            android:textSize="12.0dip" />
+    </RadioGroup>
+</LinearLayout>

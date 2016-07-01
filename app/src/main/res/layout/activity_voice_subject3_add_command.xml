@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/common_back"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        android:background="#fff7f5ed"
+        android:gravity="center_vertical">
+
+        <include layout="@layout/header" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:textColor="#ff4990cf"
+            android:textSize="21.0dip" />
+
+        <LinearLayout
+            android:id="@+id/btn_header_right2"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_transparent"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="10.0dip">
+
+            <ImageView
+                android:layout_width="20.0dip"
+                android:layout_height="20.0dip"
+                android:layout_marginLeft="5.0dip"
+                android:src="@drawable/icon_save_blue" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff3a3a3a"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8.0dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="温馨提示:您可以在此添加完全自定义的语音指令."
+            android:textColor="#ffd6d5d5"
+            android:textSize="13.0dip" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/dataView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8.0dip"
+                    android:paddingLeft="15.0dip"
+                    android:paddingTop="8.0dip"
+                    android:text="基本资料"
+                    android:textColor="#ffa29e95"
+                    android:textSize="14.0dip" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fffffcf8"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="2.0dip"
+                            android:paddingLeft="25.0dip"
+                            android:paddingTop="2.0dip">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="指令名称"
+                                android:textColor="#ffa29e95"
+                                android:textSize="15.0dip" />
+
+                            <EditText
+                                android:id="@+id/edit_command_name"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5.0dip"
+                                android:layout_marginRight="15.0dip"
+                                android:background="@drawable/eidt_text_box_border"
+                                android:ellipsize="none"
+                                android:lines="1"
+                                android:padding="5.0dip"
+                                android:singleLine="true"
+                                android:textColor="@color/black_text"
+                                android:textSize="16.0dip" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="2.0dip"
+                            android:paddingLeft="25.0dip"
+                            android:paddingTop="2.0dip">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="指令简称"
+                                android:textColor="#ffa29e95"
+                                android:textSize="15.0dip" />
+
+                            <EditText
+                                android:id="@+id/edit_command_shortname"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5.0dip"
+                                android:layout_marginRight="15.0dip"
+                                android:background="@drawable/eidt_text_box_border"
+                                android:ellipsize="none"
+                                android:lines="1"
+                                android:maxLength="1"
+                                android:padding="5.0dip"
+                                android:singleLine="true"
+                                android:textColor="@color/black_text"
+                                android:textSize="16.0dip" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="2.0dip"
+                            android:paddingLeft="25.0dip"
+                            android:paddingTop="2.0dip">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="指令发音"
+                                android:textColor="#ffa29e95"
+                                android:textSize="15.0dip" />
+
+                            <EditText
+                                android:id="@+id/edit_command_pronounce"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5.0dip"
+                                android:layout_marginRight="15.0dip"
+                                android:background="@drawable/eidt_text_box_border"
+                                android:ellipsize="none"
+                                android:lines="1"
+                                android:padding="5.0dip"
+                                android:singleLine="true"
+                                android:textColor="@color/black_text"
+                                android:textSize="16.0dip" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingRight="5.0dip"
+                        android:paddingTop="5.0dip">
+
+                        <Button
+                            android:id="@+id/voice_button"
+                            android:layout_width="84.0dip"
+                            android:layout_height="84.0dip"
+                            style="@style/command_button"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2.0dip"
+                            android:text="图标预览 点击试听"
+                            android:textColor="@color/black"
+                            android:textSize="9.0dip" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

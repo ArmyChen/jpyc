@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl"
+    android:layout_width="150dip"
+    android:layout_height="100dip">
+
+    <Button
+        android:id="@+id/voice_subject3_main_button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="1dp"
+        android:layout_centerHorizontal="true"
+        style="@style/command_button"
+        android:scaleType="center" />
+
+
+    <TextView
+        android:id="@+id/voice_subject3_main_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我擦擦"
+        android:textColor="@color/graywhite"
+        android:gravity="center"
+        android:layout_alignBottom="@+id/voice_subject3_main_button"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/voice_subject3_speaker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:gravity="center" />
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/common_back"
+    android:orientation="vertical">
+
+    <include layout="@layout/header"/>
+
+    <TextView
+        android:id="@+id/title_right"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff45c01a"
+        android:padding="3.0dip"
+        android:text="小贴士:列表中,按住上下箭头可拖动排序,点击可编辑该语音."
+        android:textColor="@color/white"
+        android:textSize="12.0dip"
+        android:visibility="gone" />
+
+    <com.twopole.android.pinned.PinnedSectionListView
+        android:id="@+id/deducion_listView"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:divider="@null"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false" />
+</LinearLayout>

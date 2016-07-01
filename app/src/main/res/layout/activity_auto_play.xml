@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff7f5ed"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+       <include layout="@layout/header"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/btn_change_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_transparent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/roadmap_name"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10.0dip"
+                        android:layout_marginLeft="0.0dip"
+                        android:layout_weight="1.0"
+                        android:gravity="left"
+                        android:singleLine="true"
+                        android:text="路线名称"
+                        android:textColor="#ff4990cf"
+                        android:textSize="16.0dip" />
+
+                    <LinearLayout
+                        android:layout_width="40.0dip"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:padding="10.0dip">
+
+                        <ImageView
+                            android:layout_width="21.0dip"
+                            android:layout_height="21.0dip"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_change_line" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:background="#fff7f5ed" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="3.0dip">
+
+                    <ListView
+                        android:id="@+id/roadmap_list"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:cacheColorHint="#00000000"
+                        android:divider="@color/whiteGray"
+                        android:dividerHeight="0.0dip"
+                        android:fadingEdge="none"
+                        android:paddingTop="0.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="1.0dip"
+                android:layout_weight="1.0"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10.0dip"
+                            android:layout_marginLeft="0.0dip"
+                            android:layout_weight="1.0"
+                            android:gravity="left"
+                            android:text="运行状态"
+                            android:textColor="#ff4990cf"
+                            android:textSize="16.0dip" />
+
+                        <LinearLayout
+                            android:id="@+id/btn_gps_check"
+                            android:layout_width="50.0dip"
+                            android:layout_height="fill_parent"
+                            android:background="@drawable/btn_transparent"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="22.0dip"
+                                android:layout_height="22.0dip"
+                                android:src="@drawable/icon_gps_blue" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0px"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_marginRight="5.0dip"
+                        android:background="#fff7f5ed" />
+
+                    <LinearLayout
+                        android:id="@+id/road_gps2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8.0dip">
+
+                        <TextView
+                            android:id="@+id/loc_direction"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4.0dip"
+                            android:gravity="left"
+                            android:text="方向:"
+                            android:textColor="#ff4990cf"
+                            android:textSize="14.0dip" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/loc_radius"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4.0dip"
+                                android:layout_weight="1.0"
+                                android:gravity="left"
+                                android:text="GPS精度:"
+                                android:textColor="#ff4990cf"
+                                android:textSize="14.0dip" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/car_speed"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4.0dip"
+                            android:gravity="left"
+                            android:text="车速:"
+                            android:textColor="#ff4990cf"
+                            android:textSize="14.0dip" />
+
+                        <TextView
+                            android:id="@+id/engine_rpm"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4.0dip"
+                            android:gravity="left"
+                            android:text="转速:"
+                            android:textColor="#ff4990cf"
+                            android:textSize="14.0dip"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_start_play"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:layout_marginTop="8.0dip"
+                        android:background="@drawable/btn_blue"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="8.0dip">
+
+                        <ImageView
+                            android:layout_width="18.0dip"
+                            android:layout_height="18.0dip"
+                            android:src="@drawable/icon_play" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8.0dip"
+                            android:gravity="left"
+                            android:text="开始播报"
+                            android:textColor="@color/white"
+                            android:textSize="16.0dip" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_stop_play"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:layout_marginTop="8.0dip"
+                        android:background="@drawable/btn_orange"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="8.0dip">
+
+                        <ImageView
+                            android:layout_width="18.0dip"
+                            android:layout_height="18.0dip"
+                            android:src="@drawable/icon_stop" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8.0dip"
+                            android:gravity="left"
+                            android:text="停止播报"
+                            android:textColor="@color/white"
+                            android:textSize="16.0dip" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10.0dip"
+                            android:layout_marginLeft="0.0dip"
+                            android:layout_weight="1.0"
+                            android:gravity="left"
+                            android:text="当前成绩"
+                            android:textColor="#ff4990cf"
+                            android:textSize="16.0dip" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0px"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_marginRight="5.0dip"
+                        android:background="#fff7f5ed" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8.0dip">
+
+                        <TextView
+                            android:id="@+id/mileage"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4.0dip"
+                            android:gravity="left"
+                            android:text="行驶距离:0 米"
+                            android:textColor="#ff4990cf"
+                            android:textSize="14.0dip" />
+
+                        <TextView
+                            android:id="@+id/result_score"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4.0dip"
+                            android:gravity="left"
+                            android:text="目前得分:100分"
+                            android:textColor="#ff4990cf"
+                            android:textSize="14.0dip" />
+
+                        <TextView
+                            android:id="@+id/result_qualified"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4.0dip"
+                            android:gravity="left"
+                            android:text="是否合格:合格"
+                            android:textColor="#ff4990cf"
+                            android:textSize="14.0dip" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_light_exam"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:layout_marginTop="8.0dip"
+                        android:background="@drawable/block_1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="8.0dip">
+
+                        <ImageView
+                            android:layout_width="18.0dip"
+                            android:layout_height="18.0dip"
+                            android:src="@drawable/icon_lights_white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8.0dip"
+                            android:gravity="left"
+                            android:text="灯光考试"
+                            android:textColor="@color/white"
+                            android:textSize="16.0dip" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <com.twopole.android.listview.HorizontalListView
+            android:id="@+id/horizontallistview1"
+            android:layout_width="fill_parent"
+            android:layout_height="80.0dip"
+            android:divider="@color/whiteGray" />
+
+    </LinearLayout>
+
+</RelativeLayout>

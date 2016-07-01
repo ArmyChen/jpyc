@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/voice_main_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5.0dip"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120.0dip"
+                        android:layout_margin="2.0dip"
+                        android:background="@drawable/voice_main_bg_1">
+
+                        <RelativeLayout
+                            android:id="@+id/btn_km2_voice"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/btn_transparent"
+                            android:clickable="true">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_margin="10.0dip"
+                                android:text="科目二语音播报"
+                                android:textColor="@color/white"
+                                android:textSize="22.0dip" />
+
+                            <ImageView
+                                android:layout_width="48.0dip"
+                                android:layout_height="48.0dip"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="10.0dip"
+                                android:src="@drawable/icon_speed" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120.0dip"
+                        android:layout_margin="2.0dip"
+                        android:background="@drawable/voice_main_bg_2">
+
+                        <RelativeLayout
+                            android:id="@+id/btn_light_voice"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/btn_transparent"
+                            android:clickable="true">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_margin="10.0dip"
+                                android:text="科目三灯光考试语音"
+                                android:textColor="@color/white"
+                                android:textSize="22.0dip" />
+
+                            <ImageView
+                                android:layout_width="48.0dip"
+                                android:layout_height="48.0dip"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="10.0dip"
+                                android:src="@drawable/icon_light" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120.0dip"
+                        android:layout_margin="2.0dip"
+                        android:background="@drawable/voice_main_bg_3">
+
+                        <RelativeLayout
+                            android:id="@+id/btn_km3_voice"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/btn_transparent"
+                            android:clickable="true">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_margin="10.0dip"
+                                android:text="科目三语音播报"
+                                android:textColor="@color/white"
+                                android:textSize="22.0dip" />
+
+                            <ImageView
+                                android:layout_width="48.0dip"
+                                android:layout_height="48.0dip"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="10.0dip"
+                                android:src="@drawable/icon_direction" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120.0dip"
+                        android:layout_margin="2.0dip"
+                        android:background="@drawable/voice_main_bg_4">
+
+                        <RelativeLayout
+                            android:id="@+id/btn_km3_auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/btn_transparent"
+                            android:clickable="true">
+
+                            <TextView
+                                android:id="@+id/kemu3_auto_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_margin="10.0dip"
+                                android:text="科目三自动播报"
+                                android:textColor="@color/white"
+                                android:textSize="22.0dip" />
+
+                            <ImageView
+                                android:layout_width="48.0dip"
+                                android:layout_height="48.0dip"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="10.0dip"
+                                android:src="@drawable/icon_auto" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+
+        </LinearLayout>
+        <include layout="@layout/footer"/>
+    </LinearLayout>
+</LinearLayout>

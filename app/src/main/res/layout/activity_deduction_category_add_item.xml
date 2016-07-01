@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff5f5f5"
+    android:orientation="vertical">
+
+   <include layout="@layout/header"/>
+
+    <TextView
+        android:id="@+id/title_right"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff45c01a"
+        android:padding="3.0dip"
+        android:text="小贴士:点击效果按钮的圆圈外可试听该语音."
+        android:textColor="@color/white"
+        android:textSize="12.0dip"
+        android:visibility="invisible" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="3.0dip"
+                android:text="项目四字简称"
+                android:textColor="@color/black_text"
+                android:textSize="17.0dip" />
+
+            <EditText
+                android:id="@+id/de_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background_rounded"
+                android:gravity="top"
+                android:hint="请输入扣分项目简称"
+                android:inputType="text"
+                android:maxLength="4"
+                android:padding="10.0dip"
+                android:paddingLeft="5.0dip"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="3.0dip"
+                android:text="扣分理由"
+                android:textColor="@color/black_text"
+                android:textSize="17.0dip" />
+
+            <EditText
+                android:id="@+id/de_reason"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background_rounded"
+                android:gravity="top"
+                android:hint="请输入扣分的理由"
+                android:minLines="2"
+                android:padding="10.0dip"
+                android:paddingLeft="5.0dip" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="3.0dip"
+                android:text="扣分分值"
+                android:textColor="@color/black_text"
+                android:textSize="17.0dip" />
+
+            <EditText
+                android:id="@+id/de_score"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background_rounded"
+                android:gravity="top"
+                android:hint="请输入扣分的分值"
+                android:inputType="number"
+                android:padding="10.0dip"
+                android:paddingLeft="5.0dip"
+                android:singleLine="true" />
+
+
+            <Button
+                android:id="@+id/save_button_item"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.0dip"
+                android:background="@drawable/btn_blue"
+                android:gravity="center"
+                android:padding="10.0dip"
+                android:text="保存"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

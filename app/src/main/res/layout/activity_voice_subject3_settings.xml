@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff7f5ed"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="0.0dip">
+
+    <include layout="@layout/header"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="60.0dip"
+                android:layout_marginTop="5.0dip"
+                android:background="@drawable/usercenter_item_bg">
+
+                <LinearLayout
+                    android:id="@+id/road_setting"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/btn_transparent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10.0dip">
+
+                    <ImageView
+                        android:layout_width="20.0dip"
+                        android:layout_height="20.0dip"
+                        android:src="@drawable/icon_broadcast" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:text="播报路线设置"
+                        android:textColor="@color/red"
+                        android:textSize="16.0dip" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="center|right"
+                        android:text=""
+                        android:textColor="#ff4990cf"
+                        android:textSize="15.0dip" />
+
+                    <ImageView
+                        android:layout_width="30.0dip"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_right" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="60.0dip"-->
+                <!--android:background="@drawable/usercenter_item_bg">-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/kemu3_auto_cycle"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="fill_parent"-->
+                    <!--android:background="@drawable/btn_transparent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:padding="10.0dip">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="20.0dip"-->
+                        <!--android:layout_height="20.0dip"-->
+                        <!--android:src="@drawable/icon_auto_black" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:layout_marginLeft="10.0dip"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:text="自动播报自动循环"-->
+                        <!--android:textColor="@color/black_text"-->
+                        <!--android:textSize="16.0dip" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/kemu3_auto_cycle_value"-->
+                        <!--android:layout_width="0.0dip"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center|right"-->
+                        <!--android:text="自动"-->
+                        <!--android:textColor="#ff4990cf"-->
+                        <!--android:textSize="15.0dip" />-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="30.0dip"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/icon_right" />-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="60.0dip"-->
+                <!--android:background="@drawable/usercenter_item_bg">-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/kemu3_auto_display_manual_btn"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="fill_parent"-->
+                    <!--android:background="@drawable/btn_transparent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:padding="10.0dip">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="18.0dip"-->
+                        <!--android:layout_height="18.0dip"-->
+                        <!--android:src="@drawable/icon_mannual" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:layout_marginLeft="10.0dip"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:text="自动播报界面显示手动按钮"-->
+                        <!--android:textColor="@color/black_text"-->
+                        <!--android:textSize="16.0dip" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/kemu3_auto_display_manual_value"-->
+                        <!--android:layout_width="0.0dip"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center|right"-->
+                        <!--android:text="显示"-->
+                        <!--android:textColor="#ff4990cf"-->
+                        <!--android:textSize="15.0dip" />-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="30.0dip"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/icon_right" />-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="60.0dip"
+                android:layout_marginTop="8.0dip"
+                android:background="@drawable/usercenter_item_bg">
+
+                <LinearLayout
+                    android:id="@+id/cmd_setting"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/btn_transparent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10.0dip">
+
+                    <ImageView
+                        android:layout_width="20.0dip"
+                        android:layout_height="20.0dip"
+                        android:src="@drawable/icon_road" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:text="科目三指令设置"
+                        android:textColor="@color/black_text"
+                        android:textSize="16.0dip" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="center|right"
+                        android:textColor="#ff4990cf"
+                        android:textSize="15.0dip" />
+
+                    <ImageView
+                        android:layout_width="30.0dip"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_right" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="60.0dip"-->
+                <!--android:background="@drawable/usercenter_item_bg">-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/compose_cmd"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="fill_parent"-->
+                    <!--android:background="@drawable/btn_transparent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:padding="10.0dip">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="20.0dip"-->
+                        <!--android:layout_height="20.0dip"-->
+                        <!--android:src="@drawable/icon_merge" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:layout_marginLeft="10.0dip"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:text="科目三组合指令设置"-->
+                        <!--android:textColor="@color/black_text"-->
+                        <!--android:textSize="16.0dip" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="0.0dip"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center|right"-->
+                        <!--android:textColor="#ff4990cf"-->
+                        <!--android:textSize="15.0dip" />-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="30.0dip"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/icon_right" />-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="60.0dip"-->
+                <!--android:background="@drawable/usercenter_item_bg">-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/global_sub_setting"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="fill_parent"-->
+                    <!--android:background="@drawable/btn_transparent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:padding="10.0dip">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="20.0dip"-->
+                        <!--android:layout_height="20.0dip"-->
+                        <!--android:src="@drawable/icon_merge" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:layout_marginLeft="10.0dip"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:text="全局评判项目设置"-->
+                        <!--android:textColor="@color/black_text"-->
+                        <!--android:textSize="16.0dip" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="0.0dip"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center|right"-->
+                        <!--android:textColor="#ff4990cf"-->
+                        <!--android:textSize="15.0dip" />-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="30.0dip"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/icon_right" />-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="60.0dip"
+                android:background="@drawable/usercenter_item_bg">
+
+                <LinearLayout
+                    android:id="@+id/edit_score"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/btn_transparent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10.0dip">
+
+                    <ImageView
+                        android:layout_width="20.0dip"
+                        android:layout_height="20.0dip"
+                        android:src="@drawable/icon_koufen" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:text="科目三扣分项目设置"
+                        android:textColor="@color/black_text"
+                        android:textSize="16.0dip" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="center|right"
+                        android:textColor="#ff4990cf"
+                        android:textSize="15.0dip" />
+
+                    <ImageView
+                        android:layout_width="30.0dip"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_right" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="60.0dip"-->
+                <!--android:background="@drawable/usercenter_item_bg">-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/play_light_before_start"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="fill_parent"-->
+                    <!--android:background="@drawable/btn_transparent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:padding="10.0dip">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="20.0dip"-->
+                        <!--android:layout_height="20.0dip"-->
+                        <!--android:src="@drawable/icon_lights" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:layout_marginLeft="10.0dip"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:text="自动播报前加灯光考试"-->
+                        <!--android:textColor="@color/black_text"-->
+                        <!--android:textSize="16.0dip" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/play_light_before_start_value"-->
+                        <!--android:layout_width="0.0dip"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center|right"-->
+                        <!--android:text="播报"-->
+                        <!--android:textColor="#ff4990cf"-->
+                        <!--android:textSize="15.0dip" />-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="30.0dip"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/icon_right" />-->
+                <!--</LinearLayout>-->
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="60.0dip"-->
+                <!--android:layout_marginTop="8.0dip"-->
+                <!--android:background="@drawable/usercenter_item_bg">-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/ll_koufen_delay_time"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="fill_parent"-->
+                    <!--android:background="@drawable/btn_transparent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:padding="10.0dip">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="20.0dip"-->
+                        <!--android:layout_height="20.0dip"-->
+                        <!--android:src="@drawable/icon_score" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:layout_marginLeft="10.0dip"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:text="指令播报后自动评判检测延时时间"-->
+                        <!--android:textColor="@color/black_text"-->
+                        <!--android:textSize="16.0dip" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_koufen_delay_time"-->
+                        <!--android:layout_width="0.0dip"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center|right"-->
+                        <!--android:text=""-->
+                        <!--android:textColor="#ff4990cf"-->
+                        <!--android:textSize="15.0dip" />-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="30.0dip"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/icon_right" />-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="60.0dip"-->
+                <!--android:background="@drawable/usercenter_item_bg">-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/speak_result_immediately"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="fill_parent"-->
+                    <!--android:background="@drawable/btn_transparent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:padding="10.0dip">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="20.0dip"-->
+                        <!--android:layout_height="20.0dip"-->
+                        <!--android:src="@drawable/icon_detail" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:layout_marginLeft="10.0dip"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:text="扣分后立即播报扣分内容"-->
+                        <!--android:textColor="@color/black_text"-->
+                        <!--android:textSize="16.0dip" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/speak_result_immediately_value"-->
+                        <!--android:layout_width="0.0dip"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center|right"-->
+                        <!--android:text="播报"-->
+                        <!--android:textColor="#ff4990cf"-->
+                        <!--android:textSize="15.0dip" />-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="30.0dip"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/icon_right" />-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="60.0dip"-->
+                <!--android:background="@drawable/usercenter_item_bg">-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/speak_result_detail_voice"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="fill_parent"-->
+                    <!--android:background="@drawable/btn_transparent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:padding="10.0dip">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="20.0dip"-->
+                        <!--android:layout_height="20.0dip"-->
+                        <!--android:src="@drawable/icon_detail" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:layout_marginLeft="10.0dip"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:text="练习完成后播报扣分详情"-->
+                        <!--android:textColor="@color/black_text"-->
+                        <!--android:textSize="16.0dip" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/speak_result_detail_voice_value"-->
+                        <!--android:layout_width="0.0dip"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center|right"-->
+                        <!--android:text="播报"-->
+                        <!--android:textColor="#ff4990cf"-->
+                        <!--android:textSize="15.0dip" />-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="30.0dip"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/icon_right" />-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="60.0dip"-->
+                <!--android:background="@drawable/usercenter_item_bg">-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/speak_koufen_voice"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="fill_parent"-->
+                    <!--android:background="@drawable/btn_transparent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:padding="10.0dip">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="20.0dip"-->
+                        <!--android:layout_height="20.0dip"-->
+                        <!--android:src="@drawable/icon_speaker" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:layout_marginLeft="10.0dip"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:text="扣分时说出语音"-->
+                        <!--android:textColor="@color/black_text"-->
+                        <!--android:textSize="16.0dip" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/speak_koufen_voice_text"-->
+                        <!--android:layout_width="0.0dip"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center|right"-->
+                        <!--android:text="说出来"-->
+                        <!--android:textColor="#ff4990cf"-->
+                        <!--android:textSize="15.0dip" />-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="30.0dip"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/icon_right" />-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="60.0dip"-->
+                <!--android:layout_marginTop="8.0dip"-->
+                <!--android:background="@drawable/usercenter_item_bg">-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/standard_score"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="fill_parent"-->
+                    <!--android:background="@drawable/btn_transparent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:padding="10.0dip">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="20.0dip"-->
+                        <!--android:layout_height="20.0dip"-->
+                        <!--android:src="@drawable/icon_score" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:layout_marginLeft="10.0dip"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:text="科目三合格分数"-->
+                        <!--android:textColor="@color/black_text"-->
+                        <!--android:textSize="16.0dip" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/standard_score_text"-->
+                        <!--android:layout_width="0.0dip"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center|right"-->
+                        <!--android:text=""-->
+                        <!--android:textColor="#ff4990cf"-->
+                        <!--android:textSize="15.0dip" />-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="30.0dip"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/icon_right" />-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="60.0dip"-->
+                <!--android:background="@drawable/usercenter_item_bg">-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/ding_setting"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="fill_parent"-->
+                    <!--android:background="@drawable/btn_transparent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:padding="10.0dip">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="20.0dip"-->
+                        <!--android:layout_height="20.0dip"-->
+                        <!--android:src="@drawable/icon_voice" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:layout_marginLeft="10.0dip"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:text="科目三播报提示音"-->
+                        <!--android:textColor="@color/black_text"-->
+                        <!--android:textSize="16.0dip" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="0.0dip"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center|right"-->
+                        <!--android:text=""-->
+                        <!--android:textColor="#ff4990cf"-->
+                        <!--android:textSize="15.0dip" />-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="30.0dip"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/icon_right" />-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,70 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="50.0dip"
+    android:background="#fff7f5ed"
+    android:gravity="center_vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/header"
+        android:layout_height="50.0dip"
+        android:background="@drawable/layout_border"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/btn_header_left"
+            android:layout_width="50.0dip"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_transparent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:background="@drawable/icon_left_blue" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/setting_head_title"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="1.0"
+            android:text="灯光考试语音播报"
+            android:textColor="#ff4990cf"
+            android:textSize="18.0dip" />
+
+        <LinearLayout
+            android:id="@+id/btn_header_right"
+            android:layout_width="50.0dip"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_transparent"
+            android:visibility="gone"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:src="@drawable/icon_setting_blue" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_header_right_add"
+            android:layout_width="50.0dip"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_transparent"
+            android:visibility="gone"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:src="@drawable/icon_add_blue" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

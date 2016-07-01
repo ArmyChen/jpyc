@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff7f5ed"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="20.0dip">
+
+    <include layout="@layout/header"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="60.0dip"
+                android:layout_marginTop="0.0dip"
+                android:background="@drawable/usercenter_item_bg">
+
+                <LinearLayout
+                    android:id="@+id/light_command_setting"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/btn_transparent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10.0dip">
+
+                    <ImageView
+                        android:layout_width="20.0dip"
+                        android:layout_height="20.0dip"
+                        android:src="@drawable/icon_lights" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:text="灯光操作指令修改"
+                        android:textColor="@color/black_text"
+                        android:textSize="16.0dip" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="center|right"
+                        android:textColor="#ff4990cf"
+                        android:textSize="15.0dip" />
+
+                    <ImageView
+                        android:layout_width="30.0dip"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_right" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="60.0dip"
+                android:background="@drawable/usercenter_item_bg">
+
+                <LinearLayout
+                    android:id="@+id/light_timer"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/btn_transparent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10.0dip">
+
+                    <ImageView
+                        android:layout_width="20.0dip"
+                        android:layout_height="20.0dip"
+                        android:src="@drawable/icon_timer" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:text="灯光指令间隔时间"
+                        android:textColor="@color/black_text"
+                        android:textSize="16.0dip" />
+
+                    <TextView
+                        android:id="@+id/light_timer_value"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="center|right"
+                        android:textColor="#ff4990cf"
+                        android:textSize="15.0dip" />
+
+                    <ImageView
+                        android:layout_width="30.0dip"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_right" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/l_email_tel"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="2.0dip"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@color/lightwhite"
+    android:orientation="horizontal"
+    android:padding="10.0dip">
+
+    <LinearLayout
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0">
+
+        <Button
+            android:id="@+id/deduction_shortname"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:singleLine="true"
+            android:text="不"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_blue"
+            android:textSize="18.0dip" />
+
+        <TextView
+            android:id="@+id/deduction_content"
+            android:layout_width="wrap_content"
+            android:maxWidth="160dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:singleLine="true"
+            android:text="打算打按时打萨达萨达萨达按时打算的阿斯顿按时打算"
+            android:textColor="#ff4e4e4e"
+            android:textSize="18.0dip" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:text="扣"
+            android:textColor="@color/btn_gray"
+            android:textSize="13.0dip" />
+        <TextView
+            android:id="@+id/deduction_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:text="100"
+            android:textColor="@color/btn_red"
+            android:textSize="13.0dip" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:text="分"
+            android:textColor="@color/btn_gray"
+            android:textSize="13.0dip" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_icon_right"
+        android:layout_marginTop="10dp"
+        android:layout_width="30.0dip"
+        android:layout_height="30.0dip"
+        android:src="@drawable/icon_right" />
+
+</LinearLayout>

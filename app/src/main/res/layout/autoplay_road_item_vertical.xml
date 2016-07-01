@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:minHeight="60.0dip"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/command_roadline"
+            android:layout_width="10.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="21.0dip"
+            android:background="#ff50adff" />
+
+        <LinearLayout
+            android:id="@+id/command_koufen"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11.0dip"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dip"
+            android:paddingLeft="5.0dip"
+            android:paddingTop="10.0dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/command_position_img"
+            android:layout_width="22.0dip"
+            android:layout_height="22.0dip"
+            android:layout_marginLeft="15.0dip"
+            android:src="@drawable/icon_circle_blue" />
+
+        <TextView
+            android:id="@+id/command_name"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5.0dip"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical|top"
+            android:text="路口左转"
+            android:textColor="#ff4990cf"
+            android:textSize="14.0dip" />
+        <TextView
+            android:id="@+id/command_speaker"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5.0dip"
+            android:visibility="invisible"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical"
+            android:text="路口左转"
+            android:textColor="#ff4990cf"
+            android:textSize="14.0dip" />
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3.0dip"
+            android:gravity="center_vertical"
+            android:text="1米"
+            android:textColor="@color/red"
+            android:textSize="14.0dip"
+            android:visibility="gone" />
+    </LinearLayout>
+</RelativeLayout>

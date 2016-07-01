@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#ffffff"
+    android:padding="10dp">
+
+
+
+    <Button
+        android:id="@+id/ivCountryLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/command_button"
+        android:layout_toRightOf="@+id/click_remove"
+        />
+    <ImageView
+        android:id="@+id/click_remove"
+        android:background="@drawable/delete_x"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"/>
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:textColor="#000000"
+        android:text="name"
+        android:layout_toLeftOf="@+id/drag_handle"/>
+
+    <ImageView
+        android:id="@+id/drag_handle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/icon_down"
+        />
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff5fdff"
+    android:orientation="vertical">
+
+    <include layout="@layout/header"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center|left"
+        android:padding="10.0dip"
+        android:text="@string/light_cmd"
+        android:textColor="#ff4890cf"
+        android:textSize="20.0sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff5fdff"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id = "@+id/suject3_light_viewitem"
+                    android:layout_weight="1.0"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingLeft="5.0dip"
+                    android:paddingRight="5.0dip"
+                    android:weightSum="1">
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0.5dip"
+                android:layout_marginRight="0.5dip"
+                android:gravity="center">
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ListView
+        android:id="@+id/list_viewitem"
+        style="@style/widget_listview"
+        android:layout_marginTop="1.0dip"
+        android:layout_weight="41.67"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/img_finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0.5dip"
+        android:background="@drawable/block_orange"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8.0dip">
+
+        <ImageView
+            android:layout_width="30.0dip"
+            android:layout_height="35.0dip"
+            android:src="@drawable/koufen" />
+
+        <TextView
+            style="@style/command_button_text"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:text="@string/btn_finish_light"
+            android:textSize="16.0dip" />
+    </LinearLayout>
+
+
+</LinearLayout>

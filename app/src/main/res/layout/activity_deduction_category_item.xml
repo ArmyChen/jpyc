@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/btn_transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/btn_koufen_category_mode_11"
+        android:layout_width="fill_parent"
+        android:layout_height="60.0dip"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/btn_koufen_category_mode_1_image"
+            android:layout_width="25.0dip"
+            android:layout_height="25.0dip"
+            android:layout_marginTop="3.0dip"
+            android:src="@drawable/icon_recent_sel" />
+
+        <TextView
+            android:id="@+id/btn_koufen_category_mode_1_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5.0dip"
+            android:text="常用扣分"
+            android:textColor="#fffc5c2d"
+            android:textSize="10.0dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_koufen_category_mode_2"
+        android:layout_width="fill_parent"
+        android:layout_height="60.0dip"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/btn_koufen_category_mode_2_image"
+            android:layout_width="25.0dip"
+            android:layout_height="25.0dip"
+            android:layout_marginTop="5.0dip"
+            android:background="@drawable/icon_circle"
+            android:gravity="center"
+            android:text="5"
+            android:textColor="#ffa29e95"
+            android:textSize="14.0dip" />
+
+        <TextView
+            android:id="@+id/btn_koufen_category_mode_2_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5.0dip"
+            android:text="5分项目"
+            android:textColor="@color/black_text"
+            android:textSize="10.0dip" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="#ffd9dbdd" />
+</LinearLayout>

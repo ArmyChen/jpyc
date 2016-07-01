@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:id="@+id/voice_main_layout" android:background="@drawable/voicebutton_bg_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="0.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/l_circle" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/circle" android:layout_width="60.0dip" android:layout_height="60.0dip">
+            <TextView android:textSize="30.0sp" android:textColor="@color/white" android:ellipsize="none" android:id="@+id/item_short" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+        </LinearLayout>
+        <TextView android:ellipsize="none" android:id="@+id/item_text1" android:layout_marginTop="2.0dip" android:text="" style="@style/command_button_text" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/l_icon" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageView android:id="@+id/item_icon" android:layout_width="60.0dip" android:layout_height="60.0dip" android:scaleType="fitXY" />
+        <TextView android:ellipsize="none" android:id="@+id/item_cmd" android:layout_marginTop="2.0dip" style="@style/command_button_text" />
+    </LinearLayout>
+</RelativeLayout>
