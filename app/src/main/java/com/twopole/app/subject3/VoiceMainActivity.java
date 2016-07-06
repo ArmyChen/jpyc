@@ -33,7 +33,7 @@ public class VoiceMainActivity extends BaseOnFooterActivity {
         mBtnKm2Voice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               showTip("开发中，请耐心等待");
+               showTip("开发中，请耐心等待下个版本");
             }
         });
         mSimulatedLightButton.setOnClickListener(new View.OnClickListener() {

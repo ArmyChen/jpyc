@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">科目三语音版</string>
+    <string name="app_name">易考星语音助手</string>
     <string name="app_id">574d0bd1</string>
     <string name="action_settings">设置</string>
     <string name="title_activity_subject3_simulated_light">科目三模拟灯光语音播报</string>

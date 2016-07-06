@@ -55,7 +55,7 @@ public class DeductionCategoryAddItemActivity extends BaseActivity {
                         return;
                 }
 
-                if(!categoryCode.isEmpty()){//如果分类存在
+                if(categoryCode != null && categoryCode != ""){//如果分类存在
 
 
                     if(itemId > 0){//编辑模式

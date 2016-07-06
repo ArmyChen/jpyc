@@ -85,7 +85,7 @@ public class DeductionCategoryActivity extends BaseActivity {
         public void myOnClick(String id,View v) {
             Intent intent = new Intent();
             intent.setClass(getBaseContext(),DeductionAddCategoryActivity.class);
-            intent.putExtra("categoryCode",id);
+            intent.putExtra("categoryCode",String.valueOf(id));
             startActivity(intent);
         }
     };
@@ -96,7 +96,7 @@ public class DeductionCategoryActivity extends BaseActivity {
         public void myOnClick(String id,View v) {
             Intent intent = new Intent();
             intent.setClass(getBaseContext(),DeductionCategoryAddItemActivity.class);
-            intent.putExtra("categoryCode",id);
+            intent.putExtra("categoryCode",String.valueOf(id));
             startActivity(intent);
         }
     };

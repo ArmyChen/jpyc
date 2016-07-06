@@ -125,6 +125,7 @@ public class AutoPlayActivity extends BaseOnHeaderActivity{
         m_btn_stop_play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playVoiceAsync("结束播报");
                if(thread != null){
                    thread.interrupt();
                    thread = null;
@@ -141,6 +142,7 @@ public class AutoPlayActivity extends BaseOnHeaderActivity{
             @Override
             public void onClick(View v) {
                 gLogger.debug("点击自动播报");
+                playVoiceAsync("开始进行自动语音播报");
                 try{
                     if(thread != null){
                         thread.interrupt();
@@ -253,7 +255,7 @@ public class AutoPlayActivity extends BaseOnHeaderActivity{
                         double distance = DistanceUtil.getDistance(geo1,geo2);
                         //TODO 记录参数
                         gLogger.debug(getBaseContext().getPackageName() + "打点播报AutoPlayLocationListener：参数{"+ bd_lat+","+bd_lgn+","+bd_drt+"；"+lat+","+lgn+","+drt+"}" + distance +"_"+ Math.abs(drt - bd_drt));
-                        if((int) distance == 21 || Math.abs(drt - bd_drt) < 20)
+                        if((int) distance <= 70 || Math.abs(drt - bd_drt) < 20)
                         {
                             RoadDetail roadDetail = null;
                             try {

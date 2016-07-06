@@ -26,9 +26,8 @@ public class BaseVoiceHeaderActivity extends BaseOnHeaderActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initVoice();
-        if(getSharedPreferences("mFlag", Context.MODE_PRIVATE).getInt("isFirstInstallAPP",0) == 0){
-            setParams();
-        }
+        setParams();
+
         queue = new PriorityBlockingQueue();
     }
 
@@ -110,12 +109,7 @@ public class BaseVoiceHeaderActivity extends BaseOnHeaderActivity {
             //设置发音人
             mTts.setParameter(SpeechConstant.VOICE_NAME, "xiaoyan");
         } else {
-            // 本地设置跳转到语记中
-            if (!SpeechUtility.getUtility().checkServiceInstalled()) {
-                mInstaller.install();
-            }else {
-                SpeechUtility.getUtility().openEngineSettings(null);
-            }
+
             //设置使用本地引擎
             mTts.setParameter(SpeechConstant.ENGINE_TYPE, SpeechConstant.TYPE_LOCAL);
             //设置发音人

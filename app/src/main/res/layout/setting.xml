@@ -22,6 +22,7 @@
 
             <LinearLayout
                 android:id="@+id/btn_kemu2_setting"
+                android:visibility="gone"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10.0dip"
@@ -85,9 +86,10 @@
 
             <LinearLayout
                 android:id="@+id/btn_kemu3_setting"
+                android:layout_marginTop="10dp"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/table_mid_bg"
+                android:background="@drawable/table_above_bg"
                 android:clickable="true"
                 android:gravity="center_vertical">
 
@@ -213,7 +215,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/table_below_bg"
+                android:background="@drawable/table_bg"
                 android:clickable="true"
                 android:gravity="center_vertical">
 

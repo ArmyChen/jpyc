@@ -39,8 +39,7 @@ public class WelcomeActivity extends BaseActivity implements OnClickListener,
     // 定义一个ArrayList来存放View
     private ArrayList<View> views;
     // 引导图片资源
-    private static final int[] pics = { R.drawable.guide1, R.drawable.guide2,
-            R.drawable.guide3, R.drawable.guide4 };
+    private static final int[] pics = { R.drawable.guide1};
     // 底部小点的图片
     private ImageView[] points;
     // 记录当前选中位置

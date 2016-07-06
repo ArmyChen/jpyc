@@ -11,6 +11,7 @@ import com.twopole.app.base.BaseActivity;
 import com.twopole.app.R;
 import com.twopole.app.base.BaseOnHeaderActivity;
 import com.twopole.app.base.WebViewActivity;
+import com.twopole.app.treasure.ArticleActivity;
 import com.twopole.utils.DataCleanManager;
 
 /**
@@ -23,6 +24,7 @@ public class VoiceSettingsActivity extends BaseOnHeaderActivity {
     LinearLayout mhelp;
     LinearLayout mabout;
     LinearLayout msetting_btn_clear_cache;
+    LinearLayout mbtn_kemu2_setting;
     TextView mcache_size;
     RadioButton btn_4;
     LinearLayout mbtn_header_left;
@@ -35,6 +37,7 @@ public class VoiceSettingsActivity extends BaseOnHeaderActivity {
         setMyTitle("语音指令");
         mbtn_light_setting = (LinearLayout) findViewById(R.id.btn_light_setting);
         mbtn_kemu3_setting = (LinearLayout) findViewById(R.id.btn_kemu3_setting);
+        mbtn_kemu2_setting = (LinearLayout) findViewById(R.id.btn_kemu2_setting);
         mhelp = (LinearLayout) findViewById(R.id.help);
         mabout = (LinearLayout) findViewById(R.id.about);
         msetting_btn_clear_cache = (LinearLayout) findViewById(R.id.setting_btn_clear_cache);
@@ -45,6 +48,12 @@ public class VoiceSettingsActivity extends BaseOnHeaderActivity {
 
         }
 
+        mbtn_kemu2_setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showTip("开发中，请耐心等待下个版本");
+            }
+        });
         mbtn_light_setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,6 +72,7 @@ public class VoiceSettingsActivity extends BaseOnHeaderActivity {
             }
         });
 
+        mhelp.setVisibility(View.GONE);
         mhelp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,8 +87,8 @@ public class VoiceSettingsActivity extends BaseOnHeaderActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(getBaseContext(),WebViewActivity.class);
-                intent.putExtra("loadUrl","http://www.2pole.com/About");
+                intent.setClass(getBaseContext(),ArticleActivity.class);
+                intent.putExtra("articleType",1);
                 startActivity(intent);
             }
         });

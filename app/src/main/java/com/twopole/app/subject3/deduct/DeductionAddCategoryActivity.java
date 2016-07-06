@@ -24,7 +24,7 @@ public class DeductionAddCategoryActivity extends BaseActivity {
         mcate_name = (EditText) findViewById(R.id.cate_name);
 
         categoryCode = getIntent().getStringExtra("categoryCode");
-        if (!categoryCode.isEmpty()) {//编辑操作
+        if (categoryCode != null && categoryCode != "") {//编辑操作
             try {
                 DeductionCategory deductionCategory = new DeductionCategory();
                 deductionCategory.setCategory_code(String.valueOf(categoryCode));
@@ -38,7 +38,7 @@ public class DeductionAddCategoryActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 if (mcate_name.getText().toString() != "") {
-                    if (!categoryCode.isEmpty()) {//编辑操作
+                    if (categoryCode != null && categoryCode != "") {//编辑操作
                         try {
                             DeductionCategory deductionCategory2 = new DeductionCategory();
                             deductionCategory2.setCategory_code(String.valueOf(categoryCode));
