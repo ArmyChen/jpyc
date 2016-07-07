@@ -143,7 +143,9 @@ public class AutoPlayActivity extends BaseOnHeaderActivity{
             public void onClick(View v) {
                 gLogger.debug("点击自动播报");
                 playVoiceAsync("开始进行自动语音播报");
+
                 try{
+
                     if(thread != null){
                         thread.interrupt();
                         thread = null;
@@ -233,9 +235,9 @@ public class AutoPlayActivity extends BaseOnHeaderActivity{
             if(bdLocation != null && dataList != null){
                 setGPSinfo(bdLocation);
 
-//                double bd_lat = 29.532583;
-//                double bd_lgn = 106.576631;
-//                double bd_drt = 3;
+//                double bd_lat = 29.513088;
+//                double bd_lgn = 106.555696;
+//                double bd_drt = 307.6;
 
                 double bd_lat = bdLocation.getLatitude();
                 double bd_lgn = bdLocation.getLongitude();
@@ -255,15 +257,16 @@ public class AutoPlayActivity extends BaseOnHeaderActivity{
                         double distance = DistanceUtil.getDistance(geo1,geo2);
                         //TODO 记录参数
                         gLogger.debug(getBaseContext().getPackageName() + "打点播报AutoPlayLocationListener：参数{"+ bd_lat+","+bd_lgn+","+bd_drt+"；"+lat+","+lgn+","+drt+"}" + distance +"_"+ Math.abs(drt - bd_drt));
-                        if((int) distance <= 70 || Math.abs(drt - bd_drt) < 20)
+                        if((int) distance <= 50 && Math.abs(drt - bd_drt) < 20)
                         {
+                            gLogger.debug("准备开始播报");
                             RoadDetail roadDetail = null;
                             try {
                                 roadDetail = getDatabaseHelper().getRoadDetailDao().queryForId(Integer.valueOf(data.get("classify_id")));
-                                roadDetail.setIs_speaker(true);
-                                myLocationBean.setIs_speak(true);
+                                roadDetail.setIs_speaker(1);
+                                myLocationBean.setIs_speak(1);
                                 roadDetail.setRoad_param_status(gson.toJson(myLocationBean));
-                                if(!roadDetail.is_speaker())
+                                if(roadDetail.is_speaker() ==  0)
                                 {
                                     playVoiceAsync(myLocationBean.getRoad_voice());
                                     getDatabaseHelper().getRoadDetailDao().update(roadDetail);
@@ -271,7 +274,6 @@ public class AutoPlayActivity extends BaseOnHeaderActivity{
                                 }else{
                                     continue;
                                 }
-
                             } catch (SQLException e) {
                                 gLogger.error(getBaseContext().getPackageName() + "打点播报AutoPlayLocationListener："+ e.getMessage());
                             }
@@ -315,5 +317,7 @@ public class AutoPlayActivity extends BaseOnHeaderActivity{
                 car_speed.setTag(String.valueOf(location.getSpeed()));
             }
         }
+
+
     }
 }

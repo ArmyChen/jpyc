@@ -21,7 +21,7 @@ public class RoadDetail {
     @DatabaseField(columnName = "road_param_status")
     private String road_param_status;
     @DatabaseField(columnName = "is_speaker")
-    private boolean is_speaker;
+    private int is_speaker;
     @DatabaseField(columnName = "is_default")
     private boolean is_default;
 
@@ -81,11 +81,11 @@ public class RoadDetail {
         this.is_default = is_default;
     }
 
-    public boolean is_speaker() {
+    public int is_speaker() {
         return is_speaker;
     }
 
-    public void setIs_speaker(boolean is_speaker) {
+    public void setIs_speaker(int is_speaker) {
         this.is_speaker = is_speaker;
     }
 }

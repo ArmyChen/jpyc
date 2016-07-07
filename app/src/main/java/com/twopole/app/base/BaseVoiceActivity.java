@@ -85,6 +85,7 @@ public class BaseVoiceActivity extends BaseActivity {
      * @param _voice
      */
     public void playVoiceAsync(String _voice){
+        gLogger.debug("进入异步线程自动播报 ："+_voice);
         try {
             if(mTts == null){
                 mTts = getmTts();

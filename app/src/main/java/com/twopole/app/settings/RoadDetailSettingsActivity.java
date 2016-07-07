@@ -174,7 +174,7 @@ public class RoadDetailSettingsActivity extends BaseOnHeaderActivity {
             roadDetail.setRoad_id(id);
             roadDetail.setRoad_project_name(project_name);
             roadDetail.setRoad_project_id(project_id);
-            roadDetail.setIs_speaker(false);
+            roadDetail.setIs_speaker(0);
             String latitude = mLoc_latitude.getTag().toString();
             String longitude = mLoc_longitude.getTag().toString();
             String direction = mLoc_direction.getTag().toString();
