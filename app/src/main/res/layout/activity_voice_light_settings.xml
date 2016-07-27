@@ -30,4 +30,13 @@
             android:maxLength="3"
             android:layout_gravity="center" />
     </LinearLayout>
+
+    <Button
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:text="保  存"
+        android:id="@+id/save_time"
+        style="@style/command_button"
+        android:layout_gravity="center_horizontal" />
+
 </LinearLayout>

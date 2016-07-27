@@ -151,7 +151,10 @@ public class VoiceSubject3SimulatedLightSettingActivity extends BaseVoiceHeaderA
             Subject3Light subject3Light = new Subject3Light();
             subject3Light.setId(Integer.parseInt(clickId));
             subject3Light.setImei(getTelephonyManager().getDeviceId());
-            subject3Light.setVoice(String.valueOf(editText.getText()));
+            if(editText != null){
+                subject3Light.setVoice(String.valueOf(editText.getText()));
+            }
+
             try {
                 getDatabaseHelper().getSubject3LightDao().delete(subject3Light);
                 refreshLight();

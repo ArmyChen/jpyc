@@ -10,7 +10,7 @@ public class MyLocationBean {
     private double speed;
     private String road_name;
     private String road_voice;
-    private int is_speak;
+    private boolean is_speak;
 
     public int getId() {
         return id;
@@ -84,11 +84,11 @@ public class MyLocationBean {
         this.road_voice = road_voice;
     }
 
-    public int is_speak() {
+    public boolean is_speak() {
         return is_speak;
     }
 
-    public void setIs_speak(int is_speak) {
+    public void setIs_speak(boolean is_speak) {
         this.is_speak = is_speak;
     }
 }

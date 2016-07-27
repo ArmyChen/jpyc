@@ -32,6 +32,7 @@ import com.twopole.model.subject3.DeductionItem;
 import com.twopole.model.subject3.Subject3;
 import com.twopole.model.subject3.Subject3Light;
 import com.twopole.provider.DatabaseHelper;
+import com.twopole.utils.Vari;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -84,8 +85,15 @@ public class BaseActivity extends Activity {
         mToast = Toast.makeText(this, "", Toast.LENGTH_SHORT);
         configLog();
 
+        int time = getSharedPreferences("settings", Context.MODE_PRIVATE).getInt("speakTimeSpans", 5);
+        if (time == 0) {
+            Vari.setSpeakTimeSpans(time);
+        }else{
+            Vari.setSpeakTimeSpans(5);
+        }
 
-        if (getSharedPreferences("mFlag", Context.MODE_PRIVATE).getInt("isFirstInstallAPP", 0) == 0) {
+        int isFirstInstall = getSharedPreferences("mFlag", Context.MODE_PRIVATE).getInt("isFirstInstallAPP", 0);
+        if (isFirstInstall == 0) {
             initData();
         }
         initLocation();

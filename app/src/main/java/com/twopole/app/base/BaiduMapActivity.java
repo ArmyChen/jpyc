@@ -25,6 +25,8 @@ import com.baidu.mapapi.model.inner.GeoPoint;
 import com.baidu.mapapi.model.inner.Point;
 import com.twopole.app.R;
 
+import java.util.List;
+
 @SuppressWarnings("MissingPermission")
 public class BaiduMapActivity extends BaseOnHeaderActivity {
     MapView mapView;
@@ -35,7 +37,8 @@ public class BaiduMapActivity extends BaseOnHeaderActivity {
     private double lat = 29.605009;
     private double lng = 106.315218;
     private LatLng latLng;
-
+    private LocationManager locationManager;
+    private String locationProvider;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,43 +48,47 @@ public class BaiduMapActivity extends BaseOnHeaderActivity {
         setContentView(R.layout.activity_baidu_map);
         initHeader();
         setMyTitle("定位查看");
-        lm = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
-        lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0,mLocationListener);
-    }
+        //获取地理位置管理器
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        //获取所有可用的位置提供器
+        List<String> providers = locationManager.getProviders(true);
+        if(providers.contains(LocationManager.GPS_PROVIDER)){
+            //如果是GPS
+            locationProvider = LocationManager.GPS_PROVIDER;
+        }else if(providers.contains(LocationManager.NETWORK_PROVIDER)){
+            //如果是Network
+            locationProvider = LocationManager.NETWORK_PROVIDER;
+        }else{
+            Toast.makeText(this, "没有可用的位置提供器", Toast.LENGTH_SHORT).show();
+            return ;
+        }
+        //获取Location
+        Location location = locationManager.getLastKnownLocation(locationProvider);
+        //1 获取经度
+        lat = location.getLongitude();
+        //2 获取纬度值
+        lng = location.getLongitude();
 
+        //绑定XML中得 mapview 控件
+        mapView = (MapView) findViewById(R.id.bmapView);
+        baiduMap = mapView.getMap();
 
-    LocationListener mLocationListener = new LocationListener()
-    {
+        if(isGPSOpen()){
 
-        @Override
-        public void onLocationChanged(Location location) {
+            latLng = new LatLng(lat, lng);
 
-            //1 获取经度
-            lat = location.getLongitude();
-            //2 获取纬度值
+        }else{
+            // showTip("GPS未打开，无法获取定位");
+            latLng = baiduMap.getMapStatus().target;
+        }
 
-            lng = location.getLongitude();
-
-            //绑定XML中得 mapview 控件
-            mapView = (MapView) findViewById(R.id.bmapView);
-            baiduMap = mapView.getMap();
-
-            if(isGPSOpen()){
-
-                latLng = new LatLng(lat, lng);
-
-            }else{
-               // showTip("GPS未打开，无法获取定位");
-                latLng = baiduMap.getMapStatus().target;
-            }
-
-            //准备 marker 的图片
-            BitmapDescriptor bitmap = BitmapDescriptorFactory.fromResource(R.drawable.icon_marka);
-            //准备 marker option 添加 marker 使用
-            markerOptions = new MarkerOptions().icon(bitmap).position(latLng);
-            //获取添加的 marker 这样便于后续的操作
-            marker = (Marker) baiduMap.addOverlay(markerOptions);
-            //对 marker 添加点击相应事件
+        //准备 marker 的图片
+        BitmapDescriptor bitmap = BitmapDescriptorFactory.fromResource(R.drawable.icon_marka);
+        //准备 marker option 添加 marker 使用
+        markerOptions = new MarkerOptions().icon(bitmap).position(latLng);
+        //获取添加的 marker 这样便于后续的操作
+        marker = (Marker) baiduMap.addOverlay(markerOptions);
+        //对 marker 添加点击相应事件
 //        baiduMap.setOnMarkerClickListener(new BaiduMap.OnMarkerClickListener() {
 //
 //            @Override
@@ -91,28 +98,6 @@ public class BaiduMapActivity extends BaseOnHeaderActivity {
 //                return false;
 //            }
 //        });
-
-        }
-
-        @Override
-        public void onProviderDisabled(String provider) {
-            // TODO Auto-generated method stub
-
-        }
-
-        @Override
-        public void onProviderEnabled(String provider) {
-            // TODO Auto-generated method stub
-
-        }
-
-        @Override
-        public void onStatusChanged(String provider, int status,
-                                    Bundle extras) {
-            // TODO Auto-generated method stub
-
-        }
-
-    };
+    }
 }
 

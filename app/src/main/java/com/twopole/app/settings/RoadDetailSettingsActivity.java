@@ -73,7 +73,7 @@ public class RoadDetailSettingsActivity extends BaseOnHeaderActivity {
         micon_gps_blue = (ImageView) findViewById(R.id.icon_gps_blue);
         id = getIntent().getIntExtra("classify_id", 0);
         name = getIntent().getStringExtra("name");
-        mbtn_header_right.setVisibility(View.VISIBLE);
+        //mbtn_header_right.setVisibility(View.VISIBLE);
 
         mRoad_title.setText(name);
 

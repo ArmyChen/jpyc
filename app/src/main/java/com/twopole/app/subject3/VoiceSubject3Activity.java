@@ -67,7 +67,7 @@ public class VoiceSubject3Activity extends BaseVoiceHeaderActivity implements Ad
                         mItemAdapter = new SimpleAdapter(VoiceSubject3Activity.this, getItemData(deductionItemList), R.layout.dedution_deteil_item_for_manually, from2, to2);
                         mItemListView.setAdapter(mItemAdapter);
                     } else {
-                        showTip("查询失败");
+                        showTip("该分类没有扣分项目");
                     }
                 } catch (SQLException e) {
                     showTip(e.getMessage());

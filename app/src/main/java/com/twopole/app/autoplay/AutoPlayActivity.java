@@ -40,6 +40,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+
 public class AutoPlayActivity extends BaseOnHeaderActivity{
     private HorizontalListViewAdapter hlva;
     private HorizontalListView hlv;
@@ -57,6 +58,10 @@ public class AutoPlayActivity extends BaseOnHeaderActivity{
     Thread thread;
     int road_settings = -1;
     private LinearLayout m_btn_start_play;
+    private TextView mMileage;
+
+    double f_lat;
+    double f_lgn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -226,8 +231,11 @@ public class AutoPlayActivity extends BaseOnHeaderActivity{
     }
 
 
-
-
+    /**
+     * 监听地图
+     * 循环地理位置，将地理位置的语音传入playAsync
+     *
+     */
     class AutoPlayLocationListener implements BDLocationListener {
 
         @Override
@@ -242,8 +250,26 @@ public class AutoPlayActivity extends BaseOnHeaderActivity{
                 double bd_lat = bdLocation.getLatitude();
                 double bd_lgn = bdLocation.getLongitude();
                 double bd_drt = bdLocation.getDirection();
+                LatLng geo2 = new LatLng(bd_lat, bd_lgn);
 
-                if((int)bdLocation.getDirection() > 0 && (int)bdLocation.getSpeed() > 0){
+                if((int)bdLocation.getDirection() <= 0 && (int)bdLocation.getSpeed() <= 0){
+                    //记录起点
+                    if(f_lat == 0){
+                        f_lat = bd_lat;//经纬度纬度
+                    }
+                    if(f_lgn == 0){
+                        f_lgn = bd_lgn;//经度
+                    }
+
+                    //计算行驶距离
+                    mMileage = (TextView) findViewById(R.id.mileage);
+                    LatLng s_geo = new LatLng(f_lat, f_lgn);
+                    double s_distance = DistanceUtil.getDistance(s_geo,geo2);
+                    if(s_distance > 0){
+                        mMileage.setText("行驶距离: "+ String.valueOf(Math.round(s_distance))+" 米");
+                    }
+
+                    //循环地理位置
                     for (HashMap<String,String> data : dataList){
                         String param  = data.get("road_param");
                         Gson gson = new Gson();
@@ -253,7 +279,7 @@ public class AutoPlayActivity extends BaseOnHeaderActivity{
                         double drt = myLocationBean.getDirection();
 
                         LatLng geo1 = new LatLng(lat, lgn);
-                        LatLng geo2 = new LatLng(bd_lat, bd_lgn);
+
                         double distance = DistanceUtil.getDistance(geo1,geo2);
                         //TODO 记录参数
                         gLogger.debug(getBaseContext().getPackageName() + "打点播报AutoPlayLocationListener：参数{"+ bd_lat+","+bd_lgn+","+bd_drt+"；"+lat+","+lgn+","+drt+"}" + distance +"_"+ Math.abs(drt - bd_drt));
@@ -263,14 +289,18 @@ public class AutoPlayActivity extends BaseOnHeaderActivity{
                             RoadDetail roadDetail = null;
                             try {
                                 roadDetail = getDatabaseHelper().getRoadDetailDao().queryForId(Integer.valueOf(data.get("classify_id")));
+                                gLogger.debug("根据分类查询路线信息："+ data.get("classify_id"));
                                 roadDetail.setIs_speaker(1);
-                                myLocationBean.setIs_speak(1);
+                                myLocationBean.setIs_speak(true);
+                                gLogger.debug("转换JSON数据");
                                 roadDetail.setRoad_param_status(gson.toJson(myLocationBean));
+                                gLogger.debug("判断本次语音是否播报："+ roadDetail.is_speaker());
                                 if(roadDetail.is_speaker() ==  0)
                                 {
+                                    gLogger.debug("准备进入语音播报方法playVoiceAsync："+myLocationBean.getRoad_voice());
                                     playVoiceAsync(myLocationBean.getRoad_voice());
                                     getDatabaseHelper().getRoadDetailDao().update(roadDetail);
-
+                                    gLogger.debug("准完成播报方法playVoiceAsync"+roadDetail.getRoad_project_name());
                                 }else{
                                     continue;
                                 }

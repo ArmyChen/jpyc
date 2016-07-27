@@ -182,7 +182,7 @@ public class BaseVoiceActivity extends BaseActivity {
 
         @Override
         public void onSpeakBegin() {
-            showTip("播报开始");
+           // showTip("播报开始");
             completed = false;
         }
 
@@ -190,14 +190,14 @@ public class BaseVoiceActivity extends BaseActivity {
         public void onSpeakPaused() {
             mTts.pauseSpeaking();
             completed = false;
-            showTip("播报暂停");
+           // showTip("播报暂停");
         }
 
         @Override
         public void onSpeakResumed() {
              mTts.resumeSpeaking();
             completed = false;
-            showTip("播报恢复");
+           // showTip("播报恢复");
         }
 
         @Override
@@ -210,12 +210,12 @@ public class BaseVoiceActivity extends BaseActivity {
         public void onSpeakProgress(int percent, int beginPos, int endPos) {
             // 播放进度
             completed = false;
-            showTip(String.valueOf(percent));
+           // showTip(String.valueOf(percent));
         }
 
         @Override
         public void onCompleted(SpeechError error) {
-            showTip("播报完成");
+           // showTip("播报完成");
             completed = true;
             thread.interrupt();
         }

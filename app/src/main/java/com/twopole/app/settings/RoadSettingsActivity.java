@@ -36,7 +36,7 @@ public class RoadSettingsActivity extends BaseOnHeaderActivity {
         setMyTitle("路线名设置");
         listView = (ListView) findViewById(R.id.line_list);
         addButton = (Button) findViewById(R.id.btn_roadmap_new);
-        findViewById(R.id.btn_header_right).setVisibility(View.VISIBLE);
+       // findViewById(R.id.btn_header_right).setVisibility(View.VISIBLE);
         findViewById(R.id.btn_header_right).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -159,8 +159,9 @@ public class RoadSettingsActivity extends BaseOnHeaderActivity {
 
                 HashMap<String, String> map = new HashMap<>();
                 map.put("name", road.getRoad_name());
-                map.put("classify_id", String.valueOf(result));
+                map.put("classify_id", String.valueOf(Integer.valueOf(road.getId())));
                 dataList.add(map);
+                list();
             } else {
                 showTip("保存失败");
             }
@@ -182,7 +183,7 @@ public class RoadSettingsActivity extends BaseOnHeaderActivity {
 
                 HashMap<String, String> map = new HashMap<>();
                 map.put("name", road.getRoad_name());
-                map.put("classify_id", String.valueOf(result));
+                map.put("classify_id", String.valueOf(road.getId()));
                 list();
             } else {
                 showTip("保存失败");
@@ -208,6 +209,7 @@ public class RoadSettingsActivity extends BaseOnHeaderActivity {
     }
 
     private void list(){
+
         String[] from = {"name", "classify_id"};
         int[] to = {R.id.name, R.id.classify_code};
 

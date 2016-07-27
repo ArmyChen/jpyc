@@ -1,8 +1,13 @@
 package com.twopole.app.settings;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -14,8 +19,7 @@ import com.twopole.utils.Vari;
 
 public class VoiceLightSettingsActivity extends BaseOnHeaderActivity {
     private EditText mTimeSpanEditText;
-    RadioButton btn_4;
-    LinearLayout mbtn_header_left;
+    private Button msave_time;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,36 +28,34 @@ public class VoiceLightSettingsActivity extends BaseOnHeaderActivity {
         initHeader();
         setMyTitle("灯光指令设置");
         mTimeSpanEditText = (EditText) findViewById(R.id.timeSpan);
-        mTimeSpanEditText.setOnClickListener(new MobileOnClickListener());
-        mTimeSpanEditText.setOnFocusChangeListener(new MobileOnFocusChanageListener());
-        mTimeSpanEditText.setOnKeyListener(new MobileOnKeyChanageListener());
+        msave_time = (Button)findViewById(R.id.save_time);
 
-        mTimeSpanEditText.setText(String.valueOf(Vari.getSpeakTimeSpans()));
 
+        init();
     }
 
-    //MobileOnFocusChanageListener焦点监听器
-    private class MobileOnClickListener implements View.OnClickListener {
-
-        @Override
-        public void onClick(View v) {
-
-        }
+    /**
+     * 注册界面按钮文本事件
+     */
+    private void init() {
+        mTimeSpanEditText.setText(String.valueOf(getSharedPreferences("settings", Context.MODE_PRIVATE).getInt("speakTimeSpans",5)));
+        msave_time.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String str  = mTimeSpanEditText.getText().toString();
+                SharedPreferences.Editor timeSpane =  getSharedPreferences("settings");
+                if(!str.isEmpty()){
+                    showTip("保存成功");
+                    timeSpane.putInt("speakTimeSpans",Integer.valueOf(str));
+                    timeSpane.commit();
+                }else{
+                    showTip("请填写时间间隔");
+                    timeSpane.putInt("speakTimeSpans",5);
+                    timeSpane.commit();
+                }
+            }
+        });
     }
-    //MobileOnFocusChanageListener焦点监听器
-    private class MobileOnFocusChanageListener implements View.OnFocusChangeListener {
-        @Override
-        public void onFocusChange(View v, boolean hasFocus) {
-            if(v.getId()==mTimeSpanEditText.getId())
-                Vari.setSpeakTimeSpans(Integer.valueOf(String.valueOf(mTimeSpanEditText.getText())));
-        }
-    }
 
-    private class MobileOnKeyChanageListener implements View.OnKeyListener {
-        @Override
-        public boolean onKey(View v, int keyCode, KeyEvent event) {
-            Vari.setSpeakTimeSpans(Integer.valueOf(String.valueOf(mTimeSpanEditText.getText())));
-            return false;
-        }
-    }
+
 }

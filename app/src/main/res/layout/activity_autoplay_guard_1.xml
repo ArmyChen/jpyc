@@ -102,17 +102,6 @@
                 android:textSize="13.0dip"
                 android:visibility="gone" />
 
-            <TextView
-                android:id="@+id/skip_guard"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:background="@drawable/btn_transparent"
-                android:padding="8.0dip"
-                android:text="跳过播报引导>>"
-                android:textColor="#ffa4a4a4"
-                android:textSize="15.0dip" />
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>

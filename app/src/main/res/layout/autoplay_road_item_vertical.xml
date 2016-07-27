@@ -44,9 +44,11 @@
 
         <TextView
             android:id="@+id/command_name"
-            android:layout_width="0.0dip"
+            android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_marginLeft="5.0dip"
+            android:layout_marginRight="15.0dip"
+            android:paddingRight="15.0dip"
             android:layout_weight="1.0"
             android:gravity="center_vertical|top"
             android:text="路口左转"
